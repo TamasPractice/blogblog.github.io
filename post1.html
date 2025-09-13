@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header>
+    <div class="container" style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap;">
+      <div class="brand">Blog-Blog</div>
+      <nav>
+        <a href="index.html">Kezdőlap</a>
+        <a href="rolunk.html">Rólunk</a>
+        <a href="bejegyzesek.html">Bejegyzések</a>
+        <a href="kapcsolat.html">Kapcsolat</a>
+        <button class="cta-outline">Feliratkozás</button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <h2>orosz–ukrán háború</h2>
+      <img src="img/post1.jpg" alt="Háborús illusztráció" class="post-img" />
+      <p>A háború 2022-ben kezdődött, és azóta geopolitikai feszültségek sorát hozta magával..</p>
+
+      <div class="interactions">
+  	<button class="icon-btn" onclick="likePost()">👍</button>
+  	<button class="icon-btn" onclick="dislikePost()">👎</button>
+        <span id="feedback"></span>
+      </div>
+
+      <div class="comments">
+        <h3>Hozzászólás</h3>
+        <textarea id="comment" rows="4"></textarea>
+        <button onclick="submitComment()">Küldés</button>
+        <ul id="commentList"></ul>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <div class="container" style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:12px;">
+      <div>© 2025 Blog-Blog</div>
+    </div>
+  </footer>
+</body>
+</html>
