@@ -334,3 +334,136 @@ button:focus-visible {
     width: 100%;
   }
 }
+
+@media (max-width: 768px) {
+  .container {
+    padding: 16px;
+  }
+
+  header .container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: center;
+    gap: 6px; /* kisebb függőleges távolság */
+  }
+
+  nav a {
+    font-size: 1.17em; /* h3 méret (kb. 18.72px) */
+    font-weight: 600;
+    padding: 4px 0;
+  }
+
+  .cta-outline {
+    width: 100%;
+    max-width: 240px;
+  }
+
+  input[type="search"] {
+    width: 100%;
+    max-width: 240px;
+    margin-bottom: 8px;
+  }
+}
+
+.brand-separator {
+  width: 120px; /* nem fut ki a széléig */
+  height: 2px;
+  background-color: var(--white);
+  margin: 8px auto 16px;
+  border-radius: 1px;
+}
+
+.brand-separator {
+  width: 280px; /* túlnyúlik a keresőn (kb. 240px) */
+  height: 1px;  /* vékonyabb vonal */
+  background-color: var(--white);
+  margin: 8px auto 16px;
+  border-radius: 1px;
+  opacity: 0.6;
+}
+
+.comments textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+.comments textarea {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+  border-radius: 8px;
+  margin: 0 auto 12px;
+  display: block;
+}
+
+/* Alapértelmezett (nagyobb kijelző) */
+.header-layout {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.brand-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.brand {
+  font-weight: 800;
+  letter-spacing: 0.3px;
+  font-size: 1.5em;
+  color: var(--white);
+}
+
+.brand-separator {
+  display: none; /* csak mobilon jelenik meg */
+}
+
+/* Mobil nézet */
+@media (max-width: 768px) {
+  .header-layout {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .brand-wrapper {
+    margin-bottom: 12px;
+    align-items: center;
+  }
+
+  .brand {
+    font-size: 1.8em;
+  }
+
+  .brand-separator {
+    display: block;
+    width: 280px;
+    height: 1px;
+    background-color: var(--white);
+    margin: 8px auto 0;
+    opacity: 0.6;
+    border-radius: 1px;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+  }
+
+  nav a {
+    font-size: 1.17em;
+    font-weight: 600;
+    padding: 4px 0;
+  }
+}
